@@ -11,7 +11,8 @@ var gulp           = require('gulp'),
     uglify         = require('gulp-uglify'),
     del            = require('del'),
     webpack        = require('webpack'),
-    webpackStream  = require('webpack-stream');
+    webpackStream  = require('webpack-stream'),
+    webpackConfig = require('./webpack.config.js');
 
 
 var paths = {
@@ -63,7 +64,7 @@ function clean() {
 
 function scripts() {
     return gulp.src('src/scripts/app.js')
-        .pipe(webpackStream())
+        .pipe(webpackStream(webpackConfig, webpack))
         .pipe(gulp.dest(paths.scripts.dest));
 }
 

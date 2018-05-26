@@ -23,6 +23,7 @@
     "normalize.css": "^8.0.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
     "webpack": "^4.8.1",
+    "webpack-config": "^7.5.0",
     "webpack-stream": "^4.0.3"
   },
   "scripts": {
